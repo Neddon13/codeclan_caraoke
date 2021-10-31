@@ -6,13 +6,14 @@ from classes.song import Song
 class TestRoom(unittest.TestCase):
 
     def setUp(self):
-        self.room1 = {"name": "Blue", "Capacity": 2}
-        self.room2 = {"name": "Green", "Capacity": 3}
-        self.room3 = {"name": "Red", "Capacity": 5}
+        self.room = Room("Blue", 4, 16)
+        self.guest = Guest("Katy", 27, 60)
+        self.song = Song("Man, I feel like a woman!", "Shania Twain")
 
     def test_does_room_have_name(self):
-        self.assertEqual("Blue", self.room1["name"])
+        self.assertEqual("Blue", self.room.name)
 
     def test_does_room_have_capacity(self):
-        self.assertEqual(3, self.room2["Capacity"])
+        self.assertEqual(4, self.room.capacity)
+    
 

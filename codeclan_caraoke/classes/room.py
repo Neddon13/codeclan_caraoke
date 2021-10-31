@@ -2,8 +2,10 @@ from classes.guest import Guest
 
 class Room:
 
-    def __init__(self):
-        self
+    def __init__(self, name, capacity, price):
+        self.name = name
+        self.capacity = capacity
+        self.price = price
+        self.check_in = []
 
-    def add_or_remove_guests(self):
-        self.room2 += Guest
+        
