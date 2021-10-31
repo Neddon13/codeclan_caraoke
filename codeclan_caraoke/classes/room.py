@@ -8,4 +8,5 @@ class Room:
         self.price = price
         self.check_in = []
 
-        
+    def check_in_guest(self):
+        check_in_guest = self.check_in.append["Katy"]
