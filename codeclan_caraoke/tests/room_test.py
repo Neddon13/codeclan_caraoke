@@ -7,7 +7,6 @@ class TestRoom(unittest.TestCase):
 
     def setUp(self):
         self.room = Room("Blue", 12)
-        self.guest = Guest("Sam", 33, 150)
 
     def test_does_room_have_name(self):
         self.assertEqual("Blue", self.room.name)
