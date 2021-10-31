@@ -27,3 +27,6 @@ class TestGuest(unittest.TestCase):
 
     def test_does_guests_have_age(self):
         self.assertEqual(29, self.guests[2]["age"])
+
+    def test_does_guests_have_cash(self):
+        self.assertEqual(50, self.guests[2]["cash"])
