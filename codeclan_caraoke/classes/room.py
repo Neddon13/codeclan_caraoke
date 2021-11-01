@@ -10,8 +10,11 @@ class Room:
     def check_in_guest(self, guest):
         self.check_in.append(guest)
 
-    def check_guest_has_enough_cash(self, guest):
-        if guest.cash >= self.room1.price:
-            return "Have fun!"
-        else:
-            return "Not enough cash!"
+    def add_song_to_play_list(self, song):
+        self.play_list.append(song)
+
+    def remove_song_by_title(self, title):
+        [self.play_list.remove(song) 
+        for song in self.play_list
+        if song.title == song.title]
+

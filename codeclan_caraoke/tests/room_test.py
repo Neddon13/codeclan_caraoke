@@ -30,6 +30,13 @@ class TestRoom(unittest.TestCase):
         self.room1.check_in_guest(self.guest3)
         self.assertEqual(3, len(self.room1.check_in))
     
-    def test_does_guest_have_sufficient_funds(self):
-        self.guest1.check_guest_has_enough_cash(self.room1)
-        self.assertEqual(True, self.guest1.cash)
+    def test_add_song_to_play_list(self):
+        self.room1.add_song_to_play_list(self.song2)
+        self.room1.add_song_to_play_list(self.song4)
+        self.room1.add_song_to_play_list(self.song3)
+        self.assertEqual(3, len(self.room1.play_list))
+
+    def test_remove_song_by_title(self):
+        self.room1.play_list = [self.song1, self.song2, self.song3, self.song4]
+        self.room1.remove_song_by_title("I Will Survive")
+        self.assertEqual(2, len(self.room1.play_list))
