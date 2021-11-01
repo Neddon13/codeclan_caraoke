@@ -24,11 +24,9 @@ class TestRoom(unittest.TestCase):
     def test_does_room_have_capacity(self):
         self.assertEqual(5, self.room2.capacity)
     
-    def test_has_guest_checked_in(self):
-        self.room1.check_in_guest(self.guest1)
-        self.room1.check_in_guest(self.guest2)
-        self.room1.check_in_guest(self.guest3)
-        self.assertEqual(3, len(self.room1.check_in))
+    def test_has_guest_been_added_to_check_in(self):
+        self.room1.add_guest_to_check_in(self.guest1)
+        self.assertEqual(1, len(self.room1.check_in))
     
     def test_add_song_to_play_list(self):
         self.room1.add_song_to_play_list(self.song2)

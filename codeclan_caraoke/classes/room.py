@@ -7,7 +7,7 @@ class Room:
         self.play_list = []
         self.check_in = []
 
-    def check_in_guest(self, guest):
+    def add_guest_to_check_in(self, guest):
         self.check_in.append(guest)
 
     def add_song_to_play_list(self, song):
